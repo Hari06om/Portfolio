@@ -36,7 +36,7 @@ const Footer = async () => {
                         target="_blank"
                         className="leading-none text-muted-foreground hover:underline hover:text-white"
                     >
-                        Design & built by Hari Om Verma Islam
+                        Design & built by Hari Om Verma
                         <div className="flex items-center justify-center gap-5 pt-1">
                             <span className="flex items-center gap-2">
                                 <Star size={18} /> {stargazers_count}
