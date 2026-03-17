@@ -162,23 +162,13 @@ A Java Swing-based desktop finance application with 3 core modules — Transacti
 export const MY_EXPERIENCE = [
     {
         title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        company: 'Campuss Buzz',
+        duration: 'Jan 2026 - Present',
     },
     {
         title: 'Fullstack Developer',
         company: 'Vernatalab',
         duration: 'Oct 2025 - Present',
-    },
-    {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
-    },
-    {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
     },
 ];
 
