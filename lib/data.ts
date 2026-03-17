@@ -1,4 +1,4 @@
-import { IProject } from '@/types';
+import { IProject, ICertificate, IAchievement } from '@/types';
 
 export const GENERAL_INFO = {
     email: 'hariohmverma96@gmail.com',
@@ -18,67 +18,25 @@ export const SOCIAL_LINKS = [
 
 export const MY_STACK = {
     frontend: [
-        {
-            name: 'JavaScript',
-            icon: '/logo/js.png',
-        },
-        {
-            name: 'TypeScript',
-            icon: '/logo/ts.png',
-        },
-        {
-            name: 'React',
-            icon: '/logo/react.png',
-        },
-        {
-            name: 'Next.js',
-            icon: '/logo/next.png',
-        },
-
-        {
-            name: 'Tailwind CSS',
-            icon: '/logo/tailwind.png',
-        },
-
-        {
-            name: 'Sass',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
-        },
+        { name: 'JavaScript', icon: '/logo/js.png' },
+        { name: 'TypeScript', icon: '/logo/ts.png' },
+        { name: 'React', icon: '/logo/react.png' },
+        { name: 'Next.js', icon: '/logo/next.png' },
+        { name: 'Tailwind CSS', icon: '/logo/tailwind.png' },
+        { name: 'Sass', icon: '/logo/sass.png' },
+        { name: 'Bootstrap', icon: '/logo/bootstrap.svg' },
     ],
     backend: [
-        {
-            name: 'Node.js',
-            icon: '/logo/node.png',
-        },
-
-        {
-            name: 'Express.js',
-            icon: '/logo/express.png',
-        },
+        { name: 'Node.js', icon: '/logo/node.png' },
+        { name: 'Express.js', icon: '/logo/express.png' },
     ],
     database: [
-        {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
-        },
-        {
-            name: 'MongoDB',
-            icon: '/logo/mongodb.svg',
-        },
+        { name: 'MySQL', icon: '/logo/mysql.svg' },
+        { name: 'MongoDB', icon: '/logo/mongodb.svg' },
     ],
     tools: [
-        {
-            name: 'Git',
-            icon: '/logo/git.png',
-        },
-        {
-            name: 'AWS',
-            icon: '/logo/aws.png',
-        },
+        { name: 'Git', icon: '/logo/git.png' },
+        { name: 'AWS', icon: '/logo/aws.png' },
     ],
 };
 
@@ -87,42 +45,16 @@ export const PROJECTS: IProject[] = [
         title: 'TalentIQ',
         slug: 'talent-iq',
         liveUrl: 'https://talentiq.com/',
+        sourceCode: 'https://github.com/Hari06om',
         year: 2026,
         description: `
-  A production-grade technical interview platform built for real-time coding interviews with video, chat, and automated code evaluation. <br/> <br/>
-  
-  Key Features:<br/>
-  <ul>
-    <li>🧑‍💻 VSCode-Powered Editor: In-browser code editor with multi-language support</li>
-    <li>🎥 1-on-1 Video Rooms: WebRTC-based video interviews locked to 2 participants</li>
-    <li>⚙️ Isolated Code Execution: Secure code runner with automated test-case evaluation</li>
-    <li>💬 Real-time Chat: Stream-powered messaging during interview sessions</li>
-    <li>🎯 Auto Feedback: Instant success/failure feedback with confetti animations</li>
-    <li>🧩 Solo Practice Mode: Independent coding practice with problem library</li>
-  </ul><br/>
-  
-  Technical Highlights:
-  <ul>
-    <li>Engineered JWT-based authentication replacing third-party Clerk dependency</li>
-    <li>Integrated Stream SDK for real-time video calls and chat messaging</li>
-    <li>Implemented isolated code execution engine via Piston API</li>
-    <li>Optimized data fetching with TanStack Query reducing API calls by ~40%</li>
-    <li>Maintained code quality via CodeRabbit AI for automated PR reviews</li>
-  </ul>
-  `,
-        role: `
-  Full-Stack Developer <br/>
-  Owned the entire development lifecycle:
-  <ul>
-    <li>✅ Backend: Built REST API with Node.js, Express, and MongoDB</li>
-    <li>🔐 Auth: Implemented custom JWT authentication with bcrypt password hashing</li>
-    <li>🎨 Frontend: Built all UI components using React, Tailwind CSS and DaisyUI</li>
-    <li>🎥 Video: Integrated Stream SDK for WebRTC video rooms and real-time chat</li>
-    <li>⚙️ Code Execution: Connected Piston API for secure isolated code execution</li>
-    <li>🚀 Deployment: Deployed on Sevalla with environment configuration</li>
-    <li>🤖 Code Quality: Integrated CodeRabbit AI for automated PR analysis</li>
-  </ul>
-  `,
+A full-stack technical interview platform with 15+ features including a VSCode-powered code editor, JWT authentication, real-time chat, and 1-on-1 video rooms with screen sharing and recording.<br/><br/>
+<ul>
+  <li>Architected a VSCode-powered in-browser code editor with multi-language support and isolated code execution engine with automated test-case evaluation.</li>
+  <li>Engineered instant visual feedback (confetti on success, toast on failure) and a dedicated solo practice problems module.</li>
+  <li>Optimized server-state management using TanStack Query, reducing redundant API calls by ~40%, and maintained codebase quality across 3+ branches via Git/GitHub integrated with CodeRabbit AI for automated PR reviews.</li>
+</ul>`,
+        role: `Full-Stack Developer — owned the entire development lifecycle including backend REST API, JWT auth, frontend UI, WebRTC video rooms, and deployment on Sevalla.`,
         techStack: [
             'React',
             'Node.js',
@@ -135,134 +67,95 @@ export const PROJECTS: IProject[] = [
             'DaisyUI',
             'Tailwind CSS',
             'CodeRabbit',
-            'Sevalla',
         ],
-        thumbnail: '/projects/thumbnail/mti-electronics.webp',
-        longThumbnail: '/projects/long/mti-electronics.webp',
+        thumbnail: '/projects/thumbnail/talent-iq.png',
+        longThumbnail: '/projects/long/talent-iq.png',
         images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
+            '/projects/images/talent1.png',
+            '/projects/images/talent2.png',
         ],
     },
     {
-        title: 'Epikcart',
-        slug: 'epikcart',
+        title: 'Nutrition Tracker',
+        slug: 'nutrition-tracker',
+        sourceCode: 'https://github.com/Hari06om',
+        year: 2025,
+        description: `
+A comprehensive Android nutrition tracking app with customizable calorie/protein goals, real-time progress visualization, and quick-add functionality supporting seamless daily intake logging.<br/><br/>
+<ul>
+  <li>Implemented Shared Preferences for persistent data storage, custom progress bars with Material CardViews, long-press gesture support, and robust input validation across API levels 24–36.</li>
+  <li>Built a clean UI with View Binding, Activity lifecycle management, and Constraint Layout, reducing boilerplate code and improving rendering performance across 10+ Android device configurations.</li>
+</ul>`,
+        role: `Sole developer — designed and built the entire Android app from scratch using Kotlin and Android SDK.`,
         techStack: [
-            'React',
-            'Redux',
-            'React i18n',
-            'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
+            'Kotlin',
+            'Android SDK',
+            'Material Components',
+            'Constraint Layout',
+            'View Binding',
+            'Shared Preferences',
         ],
-        thumbnail: '/projects/thumbnail/epikcart.jpg',
-        longThumbnail: '/projects/long/epikcart.jpg',
+        thumbnail: '/projects/images/nutrition.jpeg',
+        longThumbnail: '/projects/images/nutrition.jpeg',
         images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
+            '/projects/images/nutrition1.jpeg',
+            '/projects/images/nutrition2.jpeg',
+            '/projects/images/nutrition3.jpeg',
         ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
     },
     {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
+        title: 'Fruit Selling Website',
+        slug: 'fruit-selling',
+        sourceCode: 'https://github.com/Hari06om',
+        liveUrl: '#',
+        year: 2024,
+        description: `
+A multi-page fruit and vegetable e-commerce website covering homepage, shop, product detail, cart, checkout, login, and contact modules.<br/><br/>
+<ul>
+  <li>Designed clean and interactive UI components including carousels, search modal, category filters, and product grids, enhancing visual structure and improving overall user navigation experience.</li>
+  <li>Integrated Owl Carousel, Lightbox, and Font Awesome for a polished, production-ready interface with structured product layouts, testimonials, and cart summaries.</li>
+</ul>`,
+        role: `Sole developer — built all pages and UI components from scratch.`,
         techStack: [
-            'GPT-4',
-            'Next.js',
-            'Postgressql',
-            'Prisma',
-            'Tailwind CSS',
+            'HTML5',
+            'CSS3',
+            'Bootstrap 5',
+            'JavaScript',
+            'Font Awesome',
+            'Lightbox',
+            'Owl Carousel',
         ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
+        thumbnail: '/projects/thumbnail/Fruit.png',
+        longThumbnail: '/projects/long/Fruit.png',
+        images: ['/projects/thumbnail/Fruit.png'],
     },
     {
-        title: 'Real Estate',
-        slug: 'property-pro',
+        title: 'Personal Finance Manager',
+        slug: 'personal-finance',
+        sourceCode: 'https://github.com/Hari06om',
+        year: 2024,
+        description: `
+A Java Swing-based desktop finance application with 3 core modules — Transactions, Budgets, and Reports — integrating 6 real-time financial indicators.<br/><br/>
+<ul>
+  <li>Configured a real-time dashboard tracking 6 key financial metrics with dynamic updates triggered after every transaction, enabling instant financial visibility.</li>
+  <li>Mastered robust transaction management handling 100+ entries with full CRUD operations and localized Indian Rupee (₹) currency formatting, improving financial data organization by 60%.</li>
+</ul>`,
+        role: `Sole developer — designed and built the desktop app using Java Swing and OOP design patterns.`,
         techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
+            'Java',
+            'Java Swing',
+            'AWT',
+            'OOP Design Patterns',
+            'File Handling',
         ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
+        thumbnail: '/projects/thumbnail/dashboard.png',
+        longThumbnail: '/projects/long/dashboard.png',
         images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
+            '/projects/images/dashboard.png',
+            '/projects/images/budget.png',
+            '/projects/images/reports.png',
+            '/projects/images/transactions.png',
         ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
-    },
-    {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
-    },
-    {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
-
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
     },
 ];
 
@@ -286,5 +179,67 @@ export const MY_EXPERIENCE = [
         title: 'Frontend Developer (Part-time)',
         company: 'Branex IT',
         duration: 'Jan 2022 - Oct 2022',
+    },
+];
+
+export const MY_CERTIFICATES: ICertificate[] = [
+    {
+        title: 'Completion of Cloud Computing',
+        issuer: 'NPTEL',
+        date: 'Apr 2025',
+        thumbnail: '/projects/certificates/nptel.jpg',
+    },
+    {
+        title: 'Java Maestro',
+        issuer: 'LPU',
+        date: 'Jul 2025',
+        thumbnail: '/projects/certificates/java_maestro.jpg',
+    },
+    {
+        title: 'Completion of Java + DSA',
+        issuer: 'NeoColab',
+        date: 'Dec 2024',
+        thumbnail: '/projects/certificates/dsa.jpg',
+    },
+    {
+        title: 'Master Generative AI',
+        issuer: 'Udemy',
+        date: 'Aug 2025',
+        thumbnail: '/projects/certificates/generative_ai.jpg',
+    },
+];
+
+export const MY_ACHIEVEMENTS: IAchievement[] = [
+    {
+        title: '250+ LeetCode Problems Solved',
+        platform: 'LeetCode',
+        description:
+            'Solved 250+ LeetCode problems, earning 5 badges and demonstrating strong algorithmic problem-solving skills.',
+        date: 'Mar 2026',
+        link: 'https://leetcode.com/u/Hariom06/',
+    },
+    {
+        title: '7 Badges on LeetCode',
+        platform: 'LeetCode',
+        description:
+            'Achieved 7 badges on LeetCode across multiple domains and competitive programming challenges.',
+        date: 'Mar 2026',
+        link: 'https://leetcode.com/u/Hariom06/',
+    },
+    {
+        title: '4 Badges on HackerRank',
+        platform: 'HackerRank',
+        description:
+            'Achieved 4 badges on HackerRank across multiple domains and competitive programming challenges.',
+        date: 'Jan 2026',
+        link: 'https://www.hackerrank.com/',
+    },
+    {
+        title: '3 Badges on Github',
+        platform: 'GitHub',
+        description:
+            'Earned three GitHub badges through active contributions across various domains and successful participation in competitive programming challenges.',
+        date: 'Dec 2025',
+        link: 'https://github.com/Hari06om',
     },
 ];
