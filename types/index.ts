@@ -28,3 +28,18 @@ export interface IProject {
     liveUrl?: string;
     sourceCode?: string;
 }
+
+export interface ICertificate {
+    title: string;
+    issuer: string;
+    date: string;
+    thumbnail: string;
+}
+
+export interface IAchievement {
+    title: string;
+    platform: string;
+    description: string;
+    date: string;
+    link: string;
+}
