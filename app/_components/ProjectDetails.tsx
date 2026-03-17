@@ -26,9 +26,8 @@ const ProjectDetails = ({ project }: Props) => {
                 autoAlpha: 0,
                 y: 30,
             });
-            const tl = gsap.timeline({
-                delay: 0.5,
-            });
+
+            const tl = gsap.timeline({ delay: 0.5 });
 
             tl.to('.fade-in-later', {
                 autoAlpha: 1,
@@ -39,7 +38,7 @@ const ProjectDetails = ({ project }: Props) => {
         { scope: containerRef },
     );
 
-    // blur info div and make it smaller on scroll
+    // blur info div on scroll
     useGSAP(
         () => {
             if (window.innerWidth < 992) return;
@@ -48,7 +47,6 @@ const ProjectDetails = ({ project }: Props) => {
                 filter: 'blur(3px)',
                 autoAlpha: 0,
                 scale: 0.9,
-                // position: 'sticky',
                 scrollTrigger: {
                     trigger: '#info',
                     start: 'bottom bottom',
@@ -58,28 +56,6 @@ const ProjectDetails = ({ project }: Props) => {
                     scrub: 0.5,
                 },
             });
-        },
-        { scope: containerRef },
-    );
-
-    // parallax effect on images
-    useGSAP(
-        () => {
-            gsap.utils
-                .toArray<HTMLDivElement>('#images > div')
-                .forEach((imageDiv, i) => {
-                    gsap.to(imageDiv, {
-                        backgroundPosition: `center 0%`,
-                        ease: 'none',
-                        scrollTrigger: {
-                            trigger: imageDiv,
-                            start: () => (i ? 'top bottom' : 'top 50%'),
-                            end: 'bottom top',
-                            scrub: true,
-                            // invalidateOnRefresh: true, // to make it responsive
-                        },
-                    });
-                });
         },
         { scope: containerRef },
     );
@@ -96,6 +72,7 @@ const ProjectDetails = ({ project }: Props) => {
                     Back
                 </TransitionLink>
 
+                {/* INFO SECTION */}
                 <div
                     className="top-0 min-h-[calc(100svh-100px)] flex"
                     id="info"
@@ -137,33 +114,32 @@ const ProjectDetails = ({ project }: Props) => {
                                 <p className="text-muted-foreground font-anton mb-3">
                                     Year
                                 </p>
-
                                 <div className="text-lg">{project.year}</div>
                             </div>
+
                             <div className="fade-in-later">
                                 <p className="text-muted-foreground font-anton mb-3">
                                     Tech & Technique
                                 </p>
-
                                 <div className="text-lg">
                                     {project.techStack.join(', ')}
                                 </div>
                             </div>
+
                             <div className="fade-in-later">
                                 <p className="text-muted-foreground font-anton mb-3">
                                     Description
                                 </p>
-
                                 <div className="text-lg prose-xl markdown-text">
                                     {parse(project.description)}
                                 </div>
                             </div>
+
                             {project.role && (
                                 <div className="fade-in-later">
                                     <p className="text-muted-foreground font-anton mb-3">
                                         My Role
                                     </p>
-
                                     <div className="text-lg">
                                         {parse(project.role)}
                                     </div>
@@ -175,24 +151,27 @@ const ProjectDetails = ({ project }: Props) => {
                     </div>
                 </div>
 
+                {/* IMAGES SECTION (FINAL FIXED) */}
                 <div
-                    className="fade-in-later relative flex flex-col gap-2 max-w-[800px] mx-auto"
+                    className="fade-in-later relative flex flex-col gap-8 max-w-[500px] mx-auto"
                     id="images"
                 >
-                    {project.images.map((image) => (
+                    {project.images.map((image, index) => (
                         <div
-                            key={image}
-                            className="group relative w-full aspect-[750/400] bg-background-light"
-                            style={{
-                                backgroundImage: `url(${image})`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center 50%',
-                                backgroundRepeat: 'no-repeat',
-                            }}
+                            key={index}
+                            className="group relative w-full bg-background-light overflow-hidden rounded-lg flex justify-center"
                         >
+                            <img
+                                src={image}
+                                alt={`project image ${index + 1}`}
+                                loading="lazy"
+                                className="w-full max-w-[90%] md:max-w-[700px] mx-auto h-auto object-contain rounded-md"
+                            />
+
                             <a
                                 href={image}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="absolute top-4 right-4 bg-background/70 text-foreground size-12 inline-flex justify-center items-center transition-all opacity-0 hover:bg-primary hover:text-primary-foreground group-hover:opacity-100"
                             >
                                 <ExternalLink />

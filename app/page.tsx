@@ -13,13 +13,13 @@ export default function Home() {
         <div className="page-">
             <Banner />
             <AboutMe />
-            <Skills />
             <Education />
+            <Skills />
+            <ProjectList />
+            <Certificates />
             <Experiences />
             <Internships />
-            <Certificates />
             <Achievements />
-            <ProjectList />
         </div>
     );
 }

@@ -103,22 +103,23 @@ const Project = ({ index, project, selectedProject, onMouseEnter }: Props) => {
     return (
         <TransitionLink
             href={`/projects/${project.slug}`}
-            className="project-item group leading-none py-5 md:border-b first:!pt-0 last:pb-0 last:border-none md:group-hover/projects:opacity-30 md:hover:!opacity-100 transition-all"
+            className="project-item group leading-none py-8 md:border-b first:!pt-0 last:pb-0 last:border-none md:group-hover/projects:opacity-30 md:hover:!opacity-100 transition-all"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
             {selectedProject === null && (
-                <Image
-                    src={project.thumbnail}
-                    alt="Project"
-                    width="300"
-                    height="200"
-                    className={cn(
-                        'w-full object-cover mb-6 aspect-[3/2] object-top',
-                    )}
-                    key={project.slug}
-                    loading="lazy"
-                />
+                <div className="w-full mb-6 relative overflow-hidden bg-background-light">
+                    <Image
+                        src={project.thumbnail}
+                        alt={project.title}
+                        width={800}
+                        height={600}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="w-full h-auto"
+                        key={project.slug}
+                        loading="lazy"
+                    />
+                </div>
             )}
             <div className="flex gap-2 md:gap-5">
                 <div className="font-anton text-muted-foreground">

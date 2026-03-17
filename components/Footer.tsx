@@ -8,7 +8,7 @@ interface RepoStats {
 
 const Footer = async () => {
     const repoStats = await fetch(
-        'https://api.github.com/repos/Hari Om Verma/portfolio-2.0',
+        'https://api.github.com/repos/Hari06om/portfolio',
         {
             next: {
                 revalidate: 60 * 60, // 1 hour

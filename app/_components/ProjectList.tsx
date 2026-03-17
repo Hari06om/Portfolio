@@ -20,11 +20,8 @@ const ProjectList = () => {
         PROJECTS[0].slug,
     );
 
-    // update imageRef.current href based on the cursor hover position
-    // also update image position
     useGSAP(
         (context, contextSafe) => {
-            // show image on hover
             if (window.innerWidth < 768) {
                 setSelectedProject(null);
                 return;
@@ -45,7 +42,6 @@ const ProjectList = () => {
                     imageContainer.current.getBoundingClientRect();
                 const offsetTop = e.clientY - containerRect.y;
 
-                // if cursor is outside the container, hide the image
                 if (
                     containerRect.y > e.clientY ||
                     containerRect.bottom < e.clientY ||
@@ -58,8 +54,16 @@ const ProjectList = () => {
                     });
                 }
 
+                // Clamp so image never overflows top or bottom of container
+                const minY = 0;
+                const maxY = containerRect.height - imageRect.height;
+                const clampedY = Math.min(
+                    Math.max(offsetTop - imageRect.height / 2, minY),
+                    maxY,
+                );
+
                 gsap.to(imageContainer.current, {
-                    y: offsetTop - imageRect.height / 2,
+                    y: clampedY,
                     duration: 1,
                     opacity: 1,
                 });
@@ -106,31 +110,49 @@ const ProjectList = () => {
     return (
         <section className="pb-section" id="selected-projects">
             <div className="container">
+                {/* Large Section Name */}
+                <div className="overflow-hidden mb-4">
+                    <h2 className="text-[clamp(3rem,10vw,7rem)] font-anton uppercase text-foreground/10 tracking-widest leading-none">
+                        PROJECTS
+                    </h2>
+                </div>
+
                 <SectionTitle title="SELECTED PROJECTS" />
 
-                <div className="group/projects relative" ref={containerRef}>
+                <div
+                    className="group/projects relative overflow-hidden"
+                    ref={containerRef}
+                >
                     {selectedProject !== null && (
                         <div
-                            className="max-md:hidden absolute right-0 top-0 z-[1] pointer-events-none w-[200px] xl:w-[350px] aspect-[3/4] overflow-hidden opacity-0"
+                            className="max-md:hidden absolute right-0 top-0 z-[1] pointer-events-none w-[200px] xl:w-[350px] overflow-hidden opacity-0 bg-background-light"
                             ref={imageContainer}
                         >
                             {PROJECTS.map((project) => (
-                                <Image
-                                    src={project.thumbnail}
-                                    alt="Project"
-                                    width="400"
-                                    height="500"
+                                <div
+                                    key={project.slug}
                                     className={cn(
-                                        'absolute inset-0 transition-all duration-500 w-full h-full object-cover',
+                                        'transition-opacity duration-500',
                                         {
-                                            'opacity-0':
+                                            'opacity-0 absolute inset-0':
                                                 project.slug !==
+                                                selectedProject,
+                                            'opacity-100':
+                                                project.slug ===
                                                 selectedProject,
                                         },
                                     )}
-                                    ref={imageRef}
-                                    key={project.slug}
-                                />
+                                >
+                                    <Image
+                                        src={project.thumbnail}
+                                        alt={project.title}
+                                        width={400}
+                                        height={300}
+                                        sizes="350px"
+                                        className="w-full h-auto"
+                                        ref={imageRef}
+                                    />
+                                </div>
                             ))}
                         </div>
                     )}

@@ -29,8 +29,8 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    title: 'Portfolio - Hari Om Verma ',
-    description: 'Personal portfolio of Hari Om Verma ',
+    title: 'Portfolio - Hari Om Verma Islam',
+    description: 'Personal portfolio of Hari Om Verma Islam',
 };
 
 export default function RootLayout({
@@ -39,7 +39,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" suppressHydrationWarning>
             <GoogleAnalytics gaId="G-MHLY1LNGY5" />
             <Script id="hotjar" strategy="afterInteractive">
                 {`(function(h,o,t,j,a,r){
