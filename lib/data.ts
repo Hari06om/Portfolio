@@ -14,6 +14,7 @@ export const GENERAL_INFO = {
 export const SOCIAL_LINKS = [
     { name: 'github', url: 'https://github.com/Hari06om' },
     { name: 'linkedin', url: 'https://www.linkedin.com/in/hari-om-verma20/' },
+    { name: 'leetcode', url: 'https://leetcode.com/Hariom06/' },
 ];
 
 export const MY_STACK = {
@@ -45,7 +46,7 @@ export const PROJECTS: IProject[] = [
         title: 'TalentIQ',
         slug: 'talent-iq',
         liveUrl: 'https://talentiq.com/',
-        sourceCode: 'https://github.com/Hari06om',
+        sourceCode: 'https://github.com/Hari06om/talent-IQ.git',
         year: 2026,
         description: `
 A full-stack technical interview platform with 15+ features including a VSCode-powered code editor, JWT authentication, real-time chat, and 1-on-1 video rooms with screen sharing and recording.<br/><br/>
@@ -106,8 +107,8 @@ A comprehensive Android nutrition tracking app with customizable calorie/protein
     {
         title: 'Fruit Selling Website',
         slug: 'fruit-selling',
-        sourceCode: 'https://github.com/Hari06om',
-        liveUrl: '#',
+        sourceCode: 'https://github.com/Hari06om/FruitSelling.git',
+        liveUrl: 'https://fruits00main.netlify.app/',
         year: 2024,
         description: `
 A multi-page fruit and vegetable e-commerce website covering homepage, shop, product detail, cart, checkout, login, and contact modules.<br/><br/>
@@ -127,12 +128,16 @@ A multi-page fruit and vegetable e-commerce website covering homepage, shop, pro
         ],
         thumbnail: '/projects/thumbnail/Fruit.png',
         longThumbnail: '/projects/long/Fruit.png',
-        images: ['/projects/thumbnail/Fruit.png'],
+        images: [
+            '/projects/images/fruits1.png',
+            '/projects/images/fruits2.png',
+            '/projects/images/fruits3.png',
+        ],
     },
     {
         title: 'Personal Finance Manager',
         slug: 'personal-finance',
-        sourceCode: 'https://github.com/Hari06om',
+        sourceCode: 'https://github.com/Hari06om/Personal-Finance-Manager.git',
         year: 2024,
         description: `
 A Java Swing-based desktop finance application with 3 core modules — Transactions, Budgets, and Reports — integrating 6 real-time financial indicators.<br/><br/>
