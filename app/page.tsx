@@ -17,8 +17,9 @@ export default function Home() {
             <Skills />
             <ProjectList />
             <Certificates />
-            <Experiences />
             <Achievements />
+            <Internships />
+            <Experiences />
         </div>
     );
 }

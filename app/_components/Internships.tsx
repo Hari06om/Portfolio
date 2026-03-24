@@ -9,14 +9,13 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const MY_INTERNSHIPS = [
     {
-        role: 'Your Role / Position',
-        company: 'Company Name',
-        location: 'City, State',
-        duration: 'Mon YYYY – Mon YYYY',
+        role: 'Java Development Intern',
+        company: 'Lovely Professional University',
+        location: 'Phagwara, Punjab',
+        duration: 'Jun 2025 – Jul 2025',
         description:
-            'Brief description of your responsibilities and what you worked on during this internship.',
+            'Completed the Java Maestro summer internship program — a hands-on training on developing GUI applications using Java Swing and AWT. Focused on building desktop applications with OOP design patterns and real-time UI components.',
     },
-    // Add more internships here when available
 ];
 
 const Internships = () => {
@@ -65,7 +64,6 @@ const Internships = () => {
     return (
         <section className="py-section" id="my-internships">
             <div className="container" ref={containerRef}>
-
                 {/* Large Section Name */}
                 <div className="overflow-hidden mb-4">
                     <h2 className="internship-item text-[clamp(3rem,10vw,7rem)] font-anton uppercase text-foreground/10 tracking-widest leading-none">
@@ -82,7 +80,6 @@ const Internships = () => {
                             className="internship-item group leading-none py-8 md:border-b first:!pt-0 last:pb-0 last:border-none md:group-hover/internships:opacity-30 md:hover:!opacity-100 transition-all duration-300"
                         >
                             <div className="flex gap-2 md:gap-5 items-start">
-
                                 {/* Index */}
                                 <div className="font-anton text-muted-foreground pt-1 shrink-0">
                                     _{(index + 1).toString().padStart(2, '0')}.
@@ -92,7 +89,9 @@ const Internships = () => {
                                 <div className="flex-1">
                                     <p className="text-lg text-muted-foreground mb-1">
                                         {item.company}
-                                        <span className="mx-2 opacity-40">·</span>
+                                        <span className="mx-2 opacity-40">
+                                            ·
+                                        </span>
                                         {item.location}
                                     </p>
                                     <h3 className="text-4xl xs:text-5xl font-anton transition-all duration-700 bg-gradient-to-r from-primary to-foreground from-[50%] to-[50%] bg-[length:200%] bg-right bg-clip-text text-transparent group-hover:bg-left leading-none mb-3">
