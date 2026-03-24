@@ -13,7 +13,7 @@ const MY_EDUCATION = [
         institution: 'Lovely Professional University',
         location: 'Phagwara, Punjab',
         duration: 'Since Aug 2023',
-        grade: 'CGPA: 8.45',
+        grade: 'CGPA: 7.45',
         description:
             'Pursuing core computer science fundamentals including data structures, algorithms, web technologies, and software engineering principles.',
     },
