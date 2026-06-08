@@ -13,7 +13,7 @@ const MY_EDUCATION = [
         institution: 'Lovely Professional University',
         location: 'Phagwara, Punjab',
         duration: 'Since Aug 2023',
-        grade: 'CGPA: 7.45',
+        grade: 'CGPA: 6.45',
         description:
             'Pursuing core computer science fundamentals including data structures, algorithms, web technologies, and software engineering principles.',
     },
@@ -31,7 +31,7 @@ const MY_EDUCATION = [
         institution: 'Sarla International Academy',
         location: 'Basti, Uttar Pradesh',
         duration: 'Apr 2019 – Mar 2020',
-        grade: 'Percentage: 70%',
+        grade: 'Percentage: 71%',
         description:
             'Completed foundational education with distinction in Mathematics and Sciences.',
     },

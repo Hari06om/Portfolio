@@ -45,7 +45,7 @@ export const PROJECTS: IProject[] = [
     {
         title: 'TalentIQ',
         slug: 'talent-iq',
-        liveUrl: 'https://talentiq.com/',
+        liveUrl: 'https://talent-iq-pearl.vercel.app/dashboard',
         sourceCode: 'https://github.com/Hari06om/talent-IQ.git',
         year: 2026,
         description: `
@@ -138,6 +138,8 @@ A multi-page fruit and vegetable e-commerce website covering homepage, shop, pro
         title: 'Personal Finance Manager',
         slug: 'personal-finance',
         sourceCode: 'https://github.com/Hari06om/Personal-Finance-Manager.git',
+        liveUrl:
+            'https://www.linkedin.com/posts/hari-om-verma20_javadeveloper-personalfinance-javaswing-ugcPost-7348989358915362817-381D/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEX_fhQBfEyXUVU0mu0O3TWhZEuhPsXZQOc',
         year: 2024,
         description: `
 A Java Swing-based desktop finance application with 3 core modules — Transactions, Budgets, and Reports — integrating 6 real-time financial indicators.<br/><br/>
@@ -209,15 +211,15 @@ export const MY_ACHIEVEMENTS: IAchievement[] = [
         title: '250+ LeetCode Problems Solved',
         platform: 'LeetCode',
         description:
-            'Solved 250+ LeetCode problems, earning 5 badges and demonstrating strong algorithmic problem-solving skills.',
+            'Solved 300+ LeetCode problems, earning 5 badges and demonstrating strong algorithmic problem-solving skills.',
         date: 'Mar 2026',
         link: 'https://leetcode.com/u/Hariom06/',
     },
     {
-        title: '7 Badges on LeetCode',
+        title: '9 Badges on LeetCode',
         platform: 'LeetCode',
         description:
-            'Achieved 7 badges on LeetCode across multiple domains and competitive programming challenges.',
+            'Achieved 9 badges on LeetCode across multiple domains and competitive programming challenges.',
         date: 'Mar 2026',
         link: 'https://leetcode.com/u/Hariom06/',
     },
