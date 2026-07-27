@@ -14,7 +14,7 @@ const MY_EDUCATION = [
         location: 'Phagwara, Punjab',
         duration: 'Since Aug 2023',
 <<<<<<< HEAD
-        grade: 'CGPA: 7.56',
+        grade: 'CGPA: 6.5',
 =======
         grade: 'CGPA: 6.5',
 >>>>>>> 61e41ef (updatae)
