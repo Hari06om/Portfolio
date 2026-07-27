@@ -45,7 +45,11 @@ export const PROJECTS: IProject[] = [
     {
         title: 'TalentIQ',
         slug: 'talent-iq',
+<<<<<<< HEAD
         liveUrl: 'https://talent-iq-pearl.vercel.app/dashboard',
+=======
+        liveUrl: 'https://talent-iq-pearl.vercel.app',
+>>>>>>> 61e41ef (updatae)
         sourceCode: 'https://github.com/Hari06om/talent-IQ.git',
         year: 2026,
         description: `
@@ -208,15 +212,23 @@ export const MY_CERTIFICATES: ICertificate[] = [
 
 export const MY_ACHIEVEMENTS: IAchievement[] = [
     {
-        title: '250+ LeetCode Problems Solved',
+        title: '350+ LeetCode Problems Solved',
         platform: 'LeetCode',
         description:
+<<<<<<< HEAD
             'Solved 300+ LeetCode problems, earning 5 badges and demonstrating strong algorithmic problem-solving skills.',
+=======
+            'Solved 350+ LeetCode problems, earning 5 badges and demonstrating strong algorithmic problem-solving skills.',
+>>>>>>> 61e41ef (updatae)
         date: 'Mar 2026',
         link: 'https://leetcode.com/u/Hariom06/',
     },
     {
+<<<<<<< HEAD
         title: '9 Badges on LeetCode',
+=======
+        title: '11 Badges on LeetCode',
+>>>>>>> 61e41ef (updatae)
         platform: 'LeetCode',
         description:
             'Achieved 9 badges on LeetCode across multiple domains and competitive programming challenges.',

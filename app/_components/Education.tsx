@@ -13,7 +13,11 @@ const MY_EDUCATION = [
         institution: 'Lovely Professional University',
         location: 'Phagwara, Punjab',
         duration: 'Since Aug 2023',
+<<<<<<< HEAD
         grade: 'CGPA: 7.56',
+=======
+        grade: 'CGPA: 6.5',
+>>>>>>> 61e41ef (updatae)
         description:
             'Pursuing core computer science fundamentals including data structures, algorithms, web technologies, and software engineering principles.',
     },
